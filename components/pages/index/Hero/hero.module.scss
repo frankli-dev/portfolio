@@ -1,0 +1,33 @@
+@import '/styles/global';
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 80px;
+}
+
+.headingTextContainer {
+  
+}
+
+.heading {
+  color: $primaryText;
+  font-family: $font;
+  font-size: 80px;
+  font-weight: 900;
+  margin: 10px 0;
+}
+
+.headingSpan {
+  display: block;
+}
+
+.heroText {
+  
+}

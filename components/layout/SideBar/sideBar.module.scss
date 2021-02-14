@@ -1,0 +1,83 @@
+@import '/styles/global';
+
+.sideBar {
+  background-color: $gray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60px;
+  z-index: 999;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logoImg {
+  object-fit: cover;
+  width: 90%;
+}
+
+.siteLinks {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  height: 50px;
+  margin: 10px 0;
+  width: 40%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    color: $secondary;
+    .hoverLink {
+      display: flex;
+    }
+  }
+}
+
+.activeIcon {
+  color: $secondary;
+}
+
+.hoverLink {
+  display: none;
+  font-family: $fontCode;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.socialLinks {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.socialIcon {
+  width: 30%;
+  color: $primary;
+  margin: 7px 0;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
