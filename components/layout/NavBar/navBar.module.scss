@@ -51,6 +51,14 @@
   }
 }
 
+.iconSVG {
+  width: 100%;
+}
+
+.iconSVGProjects {
+  width: 100%;
+}
+
 .activeIcon {
   color: $secondary;
 }
@@ -81,3 +89,72 @@
   }
 }
 
+@media (max-width: 550px) {
+  .sideBar {
+    top: auto;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    flex-flow: row nowrap;
+  }
+
+  .socialLinks {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .siteLinks {
+    height: 60px;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+  }
+
+  .icon {
+    width: 50px;
+    display: grid;
+    grid-template-rows: 30px 15px;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .iconSVG {
+    height: 100%;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconSVGProjects {
+    height: 100%;
+    width: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);
+  }
+
+  .hoverLink {
+    display: block;
+  }
+}
+
+@media(max-width: 300px) {
+  .icon {
+    width: auto;
+  }
+}

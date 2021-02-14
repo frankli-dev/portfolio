@@ -12,14 +12,24 @@
   padding: 80px;
 }
 
-.headingTextContainer {
+.heroText {
   
+}
+
+.headingContainer {
+
+}
+
+.tag {
+  color: whitesmoke;
+  font: $fontCursive;
+  font-size: 20px;
 }
 
 .heading {
   color: $primaryText;
   font-family: $font;
-  font-size: 80px;
+  font-size: 70px;
   font-weight: 900;
   margin: 10px 0;
 }
@@ -28,6 +38,10 @@
   display: block;
 }
 
-.heroText {
-  
+.subHeading {
+  color: $secondary;
+  font-family: $fontCode;
+  font-size: 30px;
+  letter-spacing: 3px;
 }
+

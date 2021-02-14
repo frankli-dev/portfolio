@@ -15,12 +15,17 @@ const Hero: React.FC = () => {
       <Snowfall snowflakeCount={100} />
       <div className={styles.heroText}>
         <div className={styles.headingContainer}>
+          <span className={styles.tag}>h1</span>
           <h1 className={styles.heading}>
             Hi,
             <span className={styles.headingSpan}>I'm Ice,</span>
             <span className={styles.headingSpan}>And Dev is in My Name.</span>
           </h1>
+          <span className={styles.tag}>/h1</span>
         </div>
+        <h2 className={styles.subHeading}>
+        Full Stack Developer
+        </h2>
       </div>
       <div className={styles.game}></div>
     </div>

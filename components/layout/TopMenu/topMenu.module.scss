@@ -1,0 +1,55 @@
+@import '/styles/global';
+
+.top {
+  width: 100%;
+  height: 45px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0px 5px;
+
+  @media(min-width: 551px) {
+      display: none;
+  }
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logoImg {
+  object-fit: cover;
+  height: 90%;
+}
+
+.socialLinks {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.line {
+  height: 2px;
+  width: 90px;
+  background-color: $primary;
+  margin-right: 10px;
+}
+
+.socialIcon {
+  height: 100%;
+  width: 20px;
+  color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+}

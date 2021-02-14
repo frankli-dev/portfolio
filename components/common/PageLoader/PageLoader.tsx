@@ -20,7 +20,7 @@ const PageLoader: React.FC<IProps> = ({ options }) => {
   const startPosition = 0.3;
   const stopDelayMs = 100;
   const height = 3;
-  const color = "#29D";
+  const color = "#00fff5";
 
   useEffect(() => {
     const routeChangeStart = () => {

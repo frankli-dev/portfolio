@@ -1,4 +1,4 @@
-import styles from './sideBar.module.scss'
+import styles from './navBar.module.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -15,7 +15,7 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 
-const SideBar: React.FC = () => {
+const NavBar: React.FC = () => {
   return (
     <div className={styles.sideBar}>
       <div className={styles.logo} onClick={() => window.location.reload()}>
@@ -24,8 +24,10 @@ const SideBar: React.FC = () => {
       <div className={styles.siteLinks}>
         <ActiveLink href="/" exact={true} activeClassName={styles.activeIcon}>
           <a className={styles.icon}>
+            <div className={styles.iconSVG}>
+              <FontAwesomeIcon icon={faIgloo} />
+            </div>
             <span className={styles.hoverLink}>Home</span>
-            <FontAwesomeIcon icon={faIgloo} />
           </a>
         </ActiveLink>
         <ActiveLink
@@ -34,8 +36,10 @@ const SideBar: React.FC = () => {
           activeClassName={styles.activeIcon}
         >
           <a className={styles.icon}>
+            <div className={styles.iconSVG}>
+              <FontAwesomeIcon icon={faUser} />
+            </div>
             <span className={styles.hoverLink}>About</span>
-            <FontAwesomeIcon icon={faUser} />
           </a>
         </ActiveLink>
         <ActiveLink
@@ -44,8 +48,10 @@ const SideBar: React.FC = () => {
           activeClassName={styles.activeIcon}
         >
           <a className={styles.icon}>
+            <div className={styles.iconSVG}>
+              <FontAwesomeIcon icon={faLaptopCode} />
+            </div>
             <span className={styles.hoverLink}>Skills</span>
-            <FontAwesomeIcon icon={faLaptopCode} />
           </a>
         </ActiveLink>
         <ActiveLink
@@ -54,8 +60,10 @@ const SideBar: React.FC = () => {
           activeClassName={styles.activeIcon}
         >
           <a className={styles.icon}>
+            <div className={styles.iconSVGProjects}>
+              <FontAwesomeIcon icon={faCodeBranch} />
+            </div>
             <span className={styles.hoverLink}>Projects</span>
-            <FontAwesomeIcon icon={faCodeBranch} />
           </a>
         </ActiveLink>
         <ActiveLink
@@ -64,8 +72,10 @@ const SideBar: React.FC = () => {
           activeClassName={styles.activeIcon}
         >
           <a className={styles.icon}>
+            <div className={styles.iconSVG}>
+              <FontAwesomeIcon icon={faEnvelope} />
+            </div>
             <span className={styles.hoverLink}>Contact</span>
-            <FontAwesomeIcon icon={faEnvelope} />
           </a>
         </ActiveLink>
       </div>
@@ -99,4 +109,4 @@ const SideBar: React.FC = () => {
   )
 }
 
-export default SideBar
+export default NavBar
