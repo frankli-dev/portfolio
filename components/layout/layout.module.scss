@@ -1,11 +1,18 @@
-    .layoutContainer {
-    display: flex;
-    flex-flow: column nowrap;
-    min-height: 100vh;
-  }
-  
-  
+.layoutContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+}
+
+.content {
+  padding-left: 60px;
+  flex-grow: 1;
+}
+
+@media (max-width: 550px) {
   .content {
-    padding-left: 60px;
+    padding-left: 0;
+    padding-top: 45px;
     flex-grow: 1;
   }
+}

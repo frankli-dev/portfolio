@@ -11,6 +11,7 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  overflow-y: scroll;
 }
 
 .logo {
@@ -156,5 +157,11 @@
 @media(max-width: 300px) {
   .icon {
     width: auto;
+  }
+}
+
+@media(max-height: 400px) {
+  .siteLinks {
+    height: 350px;
   }
 }
