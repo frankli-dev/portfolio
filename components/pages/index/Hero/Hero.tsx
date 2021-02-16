@@ -1,19 +1,11 @@
 import React from 'react'
 import styles from './hero.module.scss'
-import dynamic from 'next/dynamic'
+
 import Cube from './Cube/Cube'
 
 const Hero: React.FC = () => {
-  const Snowfall = dynamic(
-    () => {
-      return import('react-snowfall')
-    },
-    { ssr: false }
-  )
-
   return (
     <div className={styles.container}>
-      <Snowfall snowflakeCount={100} />
       <div className={styles.gridBox}>
         <div className={styles.heroText}>
           <div className={styles.topTags}>
@@ -34,11 +26,15 @@ const Hero: React.FC = () => {
             </h1>
             <span className={styles.tag}>{'</h1>'}</span>
           </div>
-          <h2 className={styles.subHeading}>Full Stack Developer</h2>
+          <h2 className={styles.subHeading}>Business Analyst & Full Stack Developer</h2>
         </div>
 
         <div className={styles.cube}>
+          <span className={styles.figureTagOpen}>
+            {'<figure class="ice-cube">'}
+          </span>
           <Cube />
+          <span className={styles.figureTagClose}>{'</figure>'}</span>
         </div>
       </div>
     </div>

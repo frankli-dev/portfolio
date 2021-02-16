@@ -1,0 +1,230 @@
+@import '/styles/global';
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'description description business'
+    'languages frontEnd backEnd';
+  column-gap: 10px;
+  row-gap: 10px;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 50px;
+  z-index: 10;
+}
+
+.description {
+  width: 90%;
+  grid-area: description;
+}
+
+.descriptionText {
+  text-indent: 50px;
+  font-family: $fontCode;
+  font-size: 20px;
+  color: $secondaryText;
+  text-align: justify;
+}
+
+.title {
+  color: $primaryText;
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.business {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: business;
+}
+
+.languages {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: languages;
+}
+
+.logos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-name: rotateAnimation;
+
+  &:hover {
+    .iconTitle {
+      display: flex;
+    }
+
+    .iconImage {
+      display: none;
+    }
+  }
+}
+
+.iconTitle {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontCode;
+  color: $secondary;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  user-select: none;
+  display: none;
+}
+
+.iconImage {
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.frontEnd {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: frontEnd;
+}
+
+.backEnd {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: backEnd;
+}
+
+.iconLink {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: scale(1.1);
+  }
+  20% {
+    transform: scale(1.3);
+  }
+  40% {
+    transform: scale(1.4);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1300px) {
+  .container {
+    height: min-content;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      'description description description'
+      'languages frontEnd backEnd'
+      'business . .';
+    padding: 30px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .container {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'description description'
+      'business languages'
+      'frontEnd backEnd';
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    grid-template-rows: 1fr auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'description'
+      'business'
+      'languages'
+      'frontEnd'
+      'backEnd';
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 450px) {
+  .descriptionText {
+    font-size: 16px;
+  }
+  .container {
+    padding: 20px 0px;
+    padding-bottom: 80px;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+  .iconTitle {
+      font-size: 12px;
+  }
+}

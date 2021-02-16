@@ -7,7 +7,7 @@
   overflow-y: auto;
   display: grid;
   grid-template-columns: 1fr 0.7fr;
-  grid-template-areas: "txt cube";
+  grid-template-areas: 'txt cube';
   column-gap: 20px;
   justify-content: center;
   align-content: center;
@@ -50,7 +50,6 @@
 }
 
 .headingContainer {
-
 }
 
 .heading {
@@ -68,12 +67,36 @@
 .subHeading {
   color: $secondary;
   font-family: $fontCode;
-  font-size: 30px;
-  letter-spacing: 3px;
+  font-size: 25px;
+  letter-spacing: 2px;
 }
 
 .cube {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   grid-area: cube;
+}
+
+.figureTagOpen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $tersiaryText;
+  font-family: $fontCursive;
+  font-size: 20px;
+}
+
+.figureTagClose {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: $tersiaryText;
+  font-family: $fontCursive;
+  font-size: 20px;
 }
 
 @media (max-width: 760px) {
@@ -97,10 +120,18 @@
     grid-template-areas:
       'cube'
       'txt';
-      margin-bottom: 60px;
-      padding: 20px;
+    margin-bottom: 60px;
+    padding: 20px;
   }
-  
+
+  .figureTagOpen {
+    display: none;
+  }
+
+  .figureTagClose {
+    display: none;
+  }
+
   @media (max-height: 800px) {
     .gridBox {
       height: calc(800px - 120px);

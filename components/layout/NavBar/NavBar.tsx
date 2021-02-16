@@ -90,7 +90,7 @@ const NavBar: React.FC = () => {
         </a>
         <a
           className={styles.socialIcon}
-          href="https://twitter.com/icedeveraa"
+          href="https://www.linkedin.com/in/icedevera/"
           target="_blank"
           rel="noreferrer"
         >
@@ -98,7 +98,7 @@ const NavBar: React.FC = () => {
         </a>
         <a
           className={styles.socialIcon}
-          href="https://www.linkedin.com/in/icedevera/"
+          href="https://twitter.com/icedeveraa"
           target="_blank"
           rel="noreferrer"
         >

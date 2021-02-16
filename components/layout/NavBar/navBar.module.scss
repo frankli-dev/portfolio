@@ -154,13 +154,13 @@
   }
 }
 
-@media(max-width: 300px) {
+@media (max-width: 300px) {
   .icon {
     width: auto;
   }
 }
 
-@media(max-height: 400px) {
+@media (min-width: 551px) and (max-height: 400px) {
   .siteLinks {
     height: 350px;
   }

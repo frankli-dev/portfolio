@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
+import AboutMe from '../components/pages/about/AboutMe'
 
 export const About = (): JSX.Element => (
   <>
@@ -8,7 +9,7 @@ export const About = (): JSX.Element => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Layout>
-      <h1>About</h1>
+      <AboutMe />
     </Layout>
   </>
 )

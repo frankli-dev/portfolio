@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
+import MySkills from '../components/pages/skills/MySkills'
 
 export const Skills = (): JSX.Element => (
   <>
@@ -8,7 +9,7 @@ export const Skills = (): JSX.Element => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Layout>
-      <h1>Skills</h1>>
+      <MySkills />
     </Layout>
   </>
 )

@@ -1,0 +1,34 @@
+@import "/styles/global";
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $background;
+    padding: 5px;
+  }
+  
+  .timelineIcon {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .timelineIconJFEL {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .timelineIconLF {
+    width: 150%;
+    object-fit: cover;
+  }
+
+  .timelineIconDrapem {
+    height: 150%;
+    object-fit: cover;
+  }
+  
+  .date {
+    margin: 0 20px;
+    color: $primaryText;
+  }

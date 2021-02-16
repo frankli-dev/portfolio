@@ -6,6 +6,10 @@
   animation: cubeRotation 12s linear infinite;
   transform-style: preserve-3d;
   z-index: 1000;
+
+  &:hover {
+    animation: cubeRotation 2s ease infinite;
+  }
 }
 
 .face {
