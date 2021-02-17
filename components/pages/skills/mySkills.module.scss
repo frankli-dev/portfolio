@@ -24,6 +24,24 @@
 .description {
   width: 90%;
   grid-area: description;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.tagOpen {
+  color: $tersiaryText;
+  font-family: $fontCursive;
+  font-size: 20px;
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+
+.tagClose {
+  color: $tersiaryText;
+  font-family: $fontCursive;
+  font-size: 20px;
+  justify-self: flex-end;
+  align-self: flex-end;
 }
 
 .descriptionText {
@@ -66,12 +84,31 @@
 }
 
 .logos {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+}
+
+.logosTagOpen {
+  color: $tersiaryText;
+  font-family: $fontCursive;
+  font-size: 20px;
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+
+.logosTagClose {
+  color: $tersiaryText;
+  font-family: $fontCursive;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .icon {
@@ -169,7 +206,7 @@
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   .container {
     height: min-content;
     grid-template-rows: 1fr 1fr 1fr;
@@ -204,11 +241,24 @@
       'frontEnd'
       'backEnd';
   }
+  .logosTagOpen {
+    top: -30px;
+    left: 0;
+    z-index: -1;
+    font-size: 16px;
+  }
+
+  .logosTagClose {
+    bottom: -10px;
+    font-size: 16px;
+    right: 0;
+    z-index: -1;
+  }
 }
 
 @media (max-width: 550px) {
   .container {
-    padding-bottom: 80px;
+    padding-bottom: 100px;
   }
 }
 
@@ -218,13 +268,26 @@
   }
   .container {
     padding: 20px 0px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
   }
   .icon {
     width: 50px;
     height: 50px;
   }
   .iconTitle {
-      font-size: 12px;
+    font-size: 12px;
+  }
+  .logosTagOpen {
+    left: 10px;
+  }
+
+  .logosTagClose {
+right: 10px;
+  }
+}
+
+@media (max-height: 850px) and (min-width: 1401px) {
+  .container {
+    height: 850px;
   }
 }

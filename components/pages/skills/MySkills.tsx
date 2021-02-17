@@ -5,6 +5,7 @@ const MySkills: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.description}>
         <h2 className={styles.title}>Skills & Expertise</h2>
+        <span className={styles.tagOpen}>{'<p>'}</span>
         <p className={styles.descriptionText}>
           My area of expertise comprises of creating full-stack applications and
           improving business processes.
@@ -20,11 +21,13 @@ const MySkills: React.FC = () => {
           Through this, I aim to help others realize their goals while working
           towards a better world.
         </p>
+        <span className={styles.tagClose}>{'</p>'}</span>
       </div>
 
       <div className={styles.business}>
         <h2 className={styles.title}>Business</h2>
         <div className={styles.logos}>
+          <span className={styles.logosTagOpen}>{'<svg>'}</span>
           <div className={styles.icon}>
             <img
               className={styles.iconImage}
@@ -87,12 +90,15 @@ const MySkills: React.FC = () => {
             />
             <h4 className={styles.iconTitle}>Consulting</h4>
           </div>
+
+          <span className={styles.logosTagClose}>{'</svg>'}</span>
         </div>
       </div>
 
       <div className={styles.languages}>
-        <h2 className={styles.title}>Programming Languages</h2>
+        <h2 className={styles.title}>Languages</h2>
         <div className={styles.logos}>
+          <span className={styles.logosTagOpen}>{'<svg>'}</span>
           <div className={styles.icon}>
             <img
               className={styles.iconImage}
@@ -128,12 +134,14 @@ const MySkills: React.FC = () => {
             />
             <h4 className={styles.iconTitle}>Dart</h4>
           </div>
+          <span className={styles.logosTagClose}>{'</svg>'}</span>
         </div>
       </div>
 
       <div className={styles.frontEnd}>
         <h2 className={styles.title}>Front-End</h2>
         <div className={styles.logos}>
+          <span className={styles.logosTagOpen}>{'<svg>'}</span>
           <div className={styles.icon}>
             <img
               className={styles.iconImage}
@@ -223,12 +231,23 @@ const MySkills: React.FC = () => {
             />
             <h4 className={styles.iconTitle}>Bootstrap</h4>
           </div>
+          <div className={styles.icon}>
+            <img
+              className={styles.iconImage}
+              alt="Netlify Logo"
+              src="/images/skills/frontEnd/netlify.png"
+            />
+            <h4 className={styles.iconTitle}>Netlify</h4>
+          </div>
+          <span className={styles.logosTagClose}>{'</svg>'}</span>
         </div>
+        
       </div>
 
       <div className={styles.backEnd}>
         <h2 className={styles.title}>Back-End</h2>
         <div className={styles.logos}>
+          <span className={styles.logosTagOpen}>{'<svg>'}</span>
           <a
             className={styles.iconLink}
             href="https://www.youracclaim.com/badges/feb5ea2d-92c7-4de2-aac5-bd8be068e7e0/public_url"
@@ -244,6 +263,15 @@ const MySkills: React.FC = () => {
               <h4 className={styles.iconTitle}>AWS Certified</h4>
             </div>
           </a>
+
+          <div className={styles.icon}>
+            <img
+              className={styles.iconImage}
+              alt="Heroku Logo"
+              src="/images/skills/backEnd/heroku.png"
+            />
+            <h4 className={styles.iconTitle}>Heroku</h4>
+          </div>
 
           <div className={styles.icon}>
             <img
@@ -325,6 +353,7 @@ const MySkills: React.FC = () => {
             />
             <h4 className={styles.iconTitle}>Shopify</h4>
           </div>
+          <span className={styles.logosTagClose}>{'<svg>'}</span>
         </div>
       </div>
     </div>

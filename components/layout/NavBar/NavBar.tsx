@@ -55,7 +55,7 @@ const NavBar: React.FC = () => {
           </a>
         </ActiveLink>
         <ActiveLink
-          href="/work"
+          href="/projects"
           exact={false}
           activeClassName={styles.activeIcon}
         >
