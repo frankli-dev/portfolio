@@ -1,0 +1,79 @@
+@import "/styles/global";
+
+.field {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px dashed $primary;
+  margin: 45px auto 20px;
+  transition: 500ms;
+}
+
+.label {
+  color:$primary;
+  font-size: 20px;
+  font-family: $font;
+}
+
+.input {
+  font-family: $fontCode;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  padding: 0px 0px;
+  background: none;
+  color: $primary;
+  font-size: 20px;
+  font-weight: 600;
+  resize: none;
+  transition: border 500ms;
+}
+
+.input:valid {
+  color: $secondary;
+}
+
+.input:invalid {
+  color: $error;
+}
+
+/* Border animation */
+.field::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: $secondary;
+  transform: scaleX(0);
+  transform-origin: 0%;
+  opacity: 0;
+  transition: all 500ms ease;
+  top: 2px;
+}
+
+.field:focus-within {
+  border-color: transparent;
+}
+
+.field:focus-within::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* Label animation */
+.label {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0%;
+  transition: transform 400ms;
+}
+
+.field:focus-within .label,
+.input:not(:placeholder-shown) + .label {
+  transform: scale(0.8) translateY(-2rem);
+  opacity: 1;
+}

@@ -16,7 +16,7 @@ const Layout: React.FC = ({ children }: { children: React.ReactNode }) => {
         <TopMenu />
         <NavBar />
         <div className={styles.content}>
-          <Snowfall snowflakeCount={100} />
+          <Snowfall snowflakeCount={100} style={{zIndex: 100}}/>
           {children}
         </div>
       </div>

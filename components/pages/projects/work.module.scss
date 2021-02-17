@@ -37,6 +37,7 @@
   font-family: $font;
   color: $primary;
   align-self: flex-start;
+  font-size: 45px;
 }
 
 .projectCard {
@@ -52,6 +53,7 @@
 .projectPic {
   position: relative;
   width: 75%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,6 +92,7 @@
 .projectIMG {
   object-fit: cover;
   width: 100%;
+  max-height: 100%;
   border-radius: 10px;
   z-index: 10;
 }
@@ -490,9 +493,14 @@
       }
 }
 
+@media (max-width: 600px) {
+  .heading {
+    font-size: 35px;
+  }
+}
+
 @media (max-width: 550px) {
   .container {
-    margin-bottom: 100px;
     padding: 0px;
   }
 
@@ -504,6 +512,9 @@
 @media(max-width: 450px) {
     .otherProjectCard{
         height: 450px;
+    }
+    .heading {
+      font-size: 30px;
     }
 } 
 

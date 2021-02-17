@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
+import ContactMe from '../components/pages/contact/ContactMe'
 
 export const Contact = (): JSX.Element => (
   <>
@@ -8,7 +9,7 @@ export const Contact = (): JSX.Element => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Layout>
-      <h1>Contact Me</h1>>
+      <ContactMe />
     </Layout>
   </>
 )

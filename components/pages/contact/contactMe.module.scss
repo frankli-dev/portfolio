@@ -1,0 +1,202 @@
+@import '/styles/global';
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+}
+
+.formContainer {
+  width: 100%;
+  height: 100%;
+  padding: 0 10%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.headingTagContainer {
+  display: flex;
+  margin: 20px 0;
+  flex-flow: column nowrap;
+}
+
+.headingCloseContainer {
+  display: flex;
+}
+
+.heading {
+  font-family: $font;
+  color: $secondary;
+  font-size: 60px;
+  margin: 0;
+}
+
+.tagOpen {
+  color: $tersiaryText;
+  font-family: $fontCursive;
+  font-size: 20px;
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+
+.tagClose {
+  color: $tersiaryText;
+  font-family: $fontCursive;
+  font-size: 20px;
+  justify-self: flex-end;
+  align-self: flex-end;
+  margin-left: 15px;
+}
+
+.contactMe {
+  font-family: $fontCode;
+  font-size: 20px;
+  font-weight: 600;
+  color: $primary;
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.invalidField {
+  font-family: $fontCode;
+  font-size: 17px;
+  font-weight: 400;
+  color: $error;
+}
+
+.nameEmail {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  column-gap: 30px;
+}
+
+.nameEmailInvalid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'name email';
+  justify-content: center;
+  align-content: center;
+  column-gap: 30px;
+}
+
+.invalidFieldName {
+  grid-area: name;
+  font-family: $fontCode;
+  font-size: 17px;
+  font-weight: 400;
+  color: $error;
+}
+
+.invalidFieldEmail {
+  grid-area: email;
+  font-family: $fontCode;
+  font-size: 17px;
+  font-weight: 400;
+  color: $error;
+}
+
+.submit {
+  outline: none;
+  border: none;
+  width: 120px;
+  height: 45px;
+  background-color: $primary;
+  border-radius: 5px;
+  font-family: $fontCode;
+  font-weight: 700;
+  font-size: 20px;
+  color: $background;
+  cursor: pointer;
+  transition: all 0.4s ease-in;
+  align-self: flex-end;
+  margin: 10px 0;
+  margin-bottom: 20px;
+
+  &:hover {
+    border: 3px solid $primary;
+    background-color: transparent;
+    color: $secondary;
+  }
+}
+
+.map {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr 0.8fr;
+  }
+  .heading {
+    font-size: 40px;
+  }
+  .contactMe {
+    font-size: 18px;
+  }
+  .formContainer {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 100vh;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .formContainer {
+    width: 100%;
+    height: min-content;
+    padding: 20px 5%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .headingTagContainer {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .nameEmail {
+    column-gap: 15px;
+  }
+
+  .nameEmailInvalid {
+    column-gap: 15px;
+  }
+}
+
+@media (max-height: 890px) and (min-width: 801px) {
+  .container {
+    height: 890px;
+  }
+
+  .map {
+    height: 890px;
+  }
+}

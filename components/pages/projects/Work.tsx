@@ -7,10 +7,10 @@ import styles from './work.module.scss'
 const Work = () => {
   return (
     <div className={styles.container}>
-        <span className={styles.tagOpen}>{"<h1>"}</span>
+      <span className={styles.tagOpen}>{'<h1>'}</span>
       <h1 className={styles.heading}>Some Things I've Built</h1>
-      
-      <span className={styles.tagClose}>{"</h1>"}</span>
+
+      <span className={styles.tagClose}>{'</h1>'}</span>
 
       <span className={styles.tagOpen}>{'<div class="featured">'}</span>
       <div className={styles.projectCard}>
@@ -245,14 +245,64 @@ const Work = () => {
             </div>
           </div>
         </div>
-
       </div>
-        <span className={styles.tagCloseDiv}>{'</div>'}</span>
+      <span className={styles.tagCloseDiv}>{'</div>'}</span>
 
       <h2 className={styles.subheading}>Other Noteworthy Projects</h2>
 
       <span className={styles.tagOpen}>{'<div>'}</span>
       <div className={styles.otherProjects}>
+        <div className={styles.otherProjectCard}>
+          <img
+            className={styles.otherProjectImg}
+            alt="Gladiator's Honor"
+            src="/images/projects/gladiatorshonor.png"
+          />
+
+          <div className={styles.otherProjectOverlay} />
+
+          <div className={styles.otherProjectDetails}>
+            <div className={styles.otherProjectLinks}>
+              <a
+                className={styles.otherProjectLink}
+                href="https://github.com/icedevera/gladiators-honor"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </div>
+
+            <h3 className={styles.otherProjectTitle}>Gladiator's Honor</h3>
+
+            <p className={styles.otherProjectDescription}>
+              A gladiator RPG created using VBA and Excel. Includes 2D movement,
+              character levels, RNG, battle forms, progressive difficulty,
+              infinite gamepley, and much more!
+            </p>
+
+            <div className={styles.technologies}>
+              <div className={styles.tech}>
+                <img
+                  className={styles.techIcon}
+                  alt="MS VBA Logo"
+                  src="/images/skills/business/vba.webp"
+                />
+                <span className={styles.iconTitle}>VBA</span>
+              </div>
+
+              <div className={styles.tech}>
+                <img
+                  className={styles.techIcon}
+                  alt="MS Excel Logo"
+                  src="/images/skills/business/excel.png"
+                />
+                <span className={styles.iconTitle}>MS Excel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className={styles.otherProjectCard}>
           <img
             className={styles.otherProjectImg}
@@ -633,6 +683,87 @@ const Work = () => {
                   src="/images/skills/frontEnd/flutter.webp"
                 />
                 <span className={styles.iconTitle}>Flutter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.otherProjectCard}>
+          <img
+            className={styles.otherProjectImg}
+            alt="Python Hangman"
+            src="/images/projects/hangman.png"
+          />
+
+          <div className={styles.otherProjectOverlay} />
+
+          <div className={styles.otherProjectDetails}>
+            <div className={styles.otherProjectLinks}>
+              <a
+                className={styles.otherProjectLink}
+                href="https://github.com/icedevera/scrabble-python"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </div>
+
+            <h3 className={styles.otherProjectTitle}>Scrabble</h3>
+
+            <p className={styles.otherProjectDescription}>
+              The game of scrabble developed using Python. Has the ability to
+              allow the user to play against the computer.
+            </p>
+
+            <div className={styles.technologies}>
+              <div className={styles.tech}>
+                <img
+                  className={styles.techIcon}
+                  alt="Python Logo"
+                  src="/images/skills/languages/python.png"
+                />
+                <span className={styles.iconTitle}>Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.otherProjectCard}>
+          <img
+            className={styles.otherProjectImg}
+            alt="Python Hangman"
+            src="/images/projects/hangman.png"
+          />
+
+          <div className={styles.otherProjectOverlay} />
+
+          <div className={styles.otherProjectDetails}>
+            <div className={styles.otherProjectLinks}>
+              <a
+                className={styles.otherProjectLink}
+                href="https://github.com/icedevera/hangman-python"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </div>
+
+            <h3 className={styles.otherProjectTitle}>Hangman</h3>
+
+            <p className={styles.otherProjectDescription}>
+              A simple hangman game developed using python.
+            </p>
+
+            <div className={styles.technologies}>
+              <div className={styles.tech}>
+                <img
+                  className={styles.techIcon}
+                  alt="Python Logo"
+                  src="/images/skills/languages/python.png"
+                />
+                <span className={styles.iconTitle}>Python</span>
               </div>
             </div>
           </div>
