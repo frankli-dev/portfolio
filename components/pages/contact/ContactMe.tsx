@@ -3,13 +3,50 @@ import styles from './contactMe.module.scss'
 import Map from './Map/Map'
 import { useForm } from 'react-hook-form'
 import TextInput from '../../common/TextInput/TextInput'
+import PacmanLoader from 'react-spinners/PacmanLoader'
+
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
 const ContactMe: React.FC = () => {
-  const { register, handleSubmit, errors } = useForm()
-  const onSubmit = (data, event) => {}
+  const { register, handleSubmit, errors, reset } = useForm()
+  const [submitStatus, setSubmitState] = React.useState<
+    'none' | 'error' | 'success'
+  >('none')
+  const [loading, setLoading] = React.useState<boolean>(false)
+
+  const onSubmit = (data, event) => {
+    event.preventDefault()
+    setLoading(true)
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        ...data,
+      }),
+    })
+      .then(() => {
+        setLoading(false)
+        setSubmitState('success')
+        reset()
+      })
+      .catch(() => {
+        setLoading(false)
+        setSubmitState('error')
+      })
+  }
 
   return (
     <div className={styles.container}>
+      {loading ? <div className={styles.overlay}></div> : null}
+      {loading ? (
+        <div className={styles.loader}>
+          <PacmanLoader size={100} color="#00fff5" />
+        </div>
+      ) : null}
       <div className={styles.formContainer}>
         <div className={styles.headingTagContainer}>
           <span className={styles.tagOpen}>{'<h1>'}</span>
@@ -27,13 +64,31 @@ const ContactMe: React.FC = () => {
         <form
           className={styles.form}
           onSubmit={handleSubmit(onSubmit)}
-          action="/success"
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
+          <input
+            type="hidden"
+            name="form-name"
+            ref={register}
+            value="contact"
+          />
           <span className={styles.tagOpen}>{'<form>'}</span>
-          <input type="hidden" name="form-name" value="contact" />
+          <span
+            className={
+              submitStatus === 'success'
+                ? styles.submitSuccess
+                : styles.submitError
+            }
+          >
+            {submitStatus === 'none'
+              ? ''
+              : submitStatus === 'success'
+              ? "You're response has been submitted. Thanks for reaching out!"
+              : 'Something went wrong while submitting your form'}
+          </span>
+
           <div className={styles.nameEmail}>
             <TextInput
               type="text"
