@@ -1,14 +1,14 @@
-import React from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import React from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 type IProps = {
-  href: string;
-  as?: string;
-  exact: boolean;
-  children: React.ReactNode;
-  activeClassName: string;
-};
+  href: string
+  as?: string
+  exact: boolean
+  children: React.ReactElement
+  activeClassName: string
+}
 
 const ActiveLink: React.FC<IProps> = ({
   href,
@@ -18,12 +18,12 @@ const ActiveLink: React.FC<IProps> = ({
   children,
   ...props
 }) => {
-  const { asPath } = useRouter();
+  const { asPath } = useRouter()
   // Normalize and split paths into their segments
   const segment = (p) =>
-    new URL(p, "https://drapem.design").pathname.split("/").filter((s) => s);
-  const currentPath = segment(asPath);
-  const targetPath = segment(as || href);
+    new URL(p, 'https://icedevera.com').pathname.split('/').filter((s) => s)
+  const currentPath = segment(asPath)
+  const targetPath = segment(as || href)
   // The route is active if all of the following are true:
   //   1. There are at least as many segments in the current route as in the destination route
   //   2. The current route matches the destination route
@@ -31,23 +31,23 @@ const ActiveLink: React.FC<IProps> = ({
   const isActive =
     currentPath.length >= targetPath.length &&
     targetPath.every((p, i) => currentPath[i] === p) &&
-    (!exact || targetPath.length === currentPath.length);
+    (!exact || targetPath.length === currentPath.length)
 
-  const child = React.Children.only(children);
-  const className = `${child.props.className || ""} ${
-    isActive ? activeClassName : ""
-  }`.trim();
+  const child = React.Children.only(children)
+  const className = `${child.props.className || ''} ${
+    isActive ? activeClassName : ''
+  }`.trim()
 
   return (
     <Link href={href} as={as} {...props}>
       {React.cloneElement(child, { className })}
     </Link>
-  );
-};
+  )
+}
 
 ActiveLink.defaultProps = {
-  activeClassName: "active",
+  activeClassName: 'active',
   exact: false,
-} as Partial<Props>;
+} as Partial<any>
 
-export default ActiveLink;
+export default ActiveLink
