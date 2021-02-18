@@ -1,5 +1,7 @@
 const createMapOptions = function (maps) {
-  return { styles: mapStyles }
+  return { 
+    backgroundColor: "none",  
+    styles: mapStyles }
 }
 
 const mapStyles = [

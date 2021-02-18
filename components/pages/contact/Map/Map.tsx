@@ -15,6 +15,7 @@ const Map: React.FC = () => {
           lng: 121.02194911756745,
         }}
         defaultZoom={13}
+        backgroundColor="none"
       >
         <h2
           className={styles.manila}
