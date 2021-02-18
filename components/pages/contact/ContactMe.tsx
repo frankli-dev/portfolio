@@ -3,42 +3,10 @@ import styles from './contactMe.module.scss'
 import Map from './Map/Map'
 import { useForm } from 'react-hook-form'
 import TextInput from '../../common/TextInput/TextInput'
-import PacmanLoader from 'react-spinners/PacmanLoader'
-
-function encode(data) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
 
 const ContactMe: React.FC = () => {
-  const { register, handleSubmit, errors, reset } = useForm()
-  const [submitStatus, setSubmitState] = React.useState<
-    'none' | 'error' | 'success'
-  >('none')
-  const [loading, setLoading] = React.useState<boolean>(false)
-
-  const onSubmit = (data, event) => {
-    setLoading(true)
-    event.preventDefault()
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': 'contact-ice',
-        ...data,
-      }),
-    })
-      .then(() => {
-        setLoading(false)
-        reset()
-        setSubmitState('success')
-      })
-      .catch((error) => {
-        setLoading(false)
-        setSubmitState('error')
-      })
-  }
+  const { register, handleSubmit, errors } = useForm()
+  const onSubmit = (data, event) => {}
 
   return (
     <div className={styles.container}>
@@ -59,26 +27,13 @@ const ContactMe: React.FC = () => {
         <form
           className={styles.form}
           onSubmit={handleSubmit(onSubmit)}
+          action="/success"
+          method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
           <span className={styles.tagOpen}>{'<form>'}</span>
-          <input type="hidden" name="form-name" value="contact-ice" />
-
-          <span
-            className={
-              submitStatus === 'success'
-                ? styles.submitSuccess
-                : styles.submitError
-            }
-          >
-            {submitStatus === 'none'
-              ? ''
-              : submitStatus === 'success'
-              ? "You're response has been submitted. Thanks for reaching out!"
-              : 'Something went wrong while submitting your form'}
-          </span>
-
+          <input type="hidden" name="form-name" value="contact" />
           <div className={styles.nameEmail}>
             <TextInput
               type="text"
@@ -130,13 +85,7 @@ const ContactMe: React.FC = () => {
           )}
 
           <button className={styles.submit} type="submit">
-            {loading ? (
-              <div className={styles.loader}>
-                <PacmanLoader loading={true} size={15} margin={0} color="#00fff5" />
-              </div>
-            ) : (
-              'Submit'
-            )}
+            Submit
           </button>
           <span className={styles.tagClose}>{'</form>'}</span>
         </form>
