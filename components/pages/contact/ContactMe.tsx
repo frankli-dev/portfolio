@@ -25,6 +25,7 @@ const ContactMe: React.FC = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
+        "form-name": "contact",
         ...data,
       }),
     })
@@ -64,9 +65,10 @@ const ContactMe: React.FC = () => {
         <form
           className={styles.form}
           onSubmit={handleSubmit(onSubmit)}
+          name="contact"
+          netlify-honeypot="bot-field"
           method="POST"
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
         >
           <input
             type="hidden"
@@ -74,6 +76,19 @@ const ContactMe: React.FC = () => {
             ref={register}
             value="contact"
           />
+
+          <div className={styles.fax}>
+            <label>
+              If you're a robot, please contact me by fax only:
+              <input
+                ref={register}
+                name="bot-field"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </label>
+          </div>
+
           <span className={styles.tagOpen}>{'<form>'}</span>
           <span
             className={
