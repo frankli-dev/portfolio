@@ -19,6 +19,14 @@
   justify-content: center;
 }
 
+.submitSuccess {
+  color: #3aaafe;
+}
+
+.submitError {
+  color: $error;
+}
+
 .headingTagContainer {
   display: flex;
   margin: 20px 0;
@@ -108,6 +116,7 @@
 }
 
 .submit {
+  position: relative;
   outline: none;
   border: none;
   width: 120px;
@@ -129,6 +138,12 @@
     background-color: transparent;
     color: $secondary;
   }
+}
+
+.loader {
+  position: absolute;
+  top: 11px;
+  left: 28px;
 }
 
 .map {
