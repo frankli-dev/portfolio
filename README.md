@@ -1,11 +1,17 @@
-<div style="text-align: center;">
+
+
+<div salign="center">>
   <img alt="Logo" src="https://raw.githubusercontent.com/icedevera/icedevera/master/public/ice-logo.png" width="100" />
 </div>
-<h1 style="text-align: center;">
+<h1 align="center">
   Ice in my veins 🧊, dev in my name 👨‍💻
 </h1>
-<h2 style="text-align: center;">
-<a align="center" href="https://icedevera.com" rel="noreferref" target="_blank">
-icedevera.com
-</a>
-</h2>
+<p align="center">
+<a href="https://icedevera.com" target="_blank">icedevera.com</a> 
+</p>
+
+<p align="center">
+  <a href="hhttps://app.netlify.com/sites/icedevera/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/e326f3ff-7344-418d-a555-a97f061a82b9/deploy-status" alt="Netlify Status" />
+  </a>
+</p>
