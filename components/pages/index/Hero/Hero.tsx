@@ -30,10 +30,8 @@ const Hero: React.FC = () => {
           <h2 className={styles.subHeading}>
             Business Analyst & Full Stack Developer
           </h2>
-          <Link href="/contact">
-            <div className={styles.cta}>
-              <a>Contact Me</a>
-            </div>
+          <Link href="/contact" passHref>
+            <a className={styles.cta}>Contact Me</a>
           </Link>
         </div>
 
