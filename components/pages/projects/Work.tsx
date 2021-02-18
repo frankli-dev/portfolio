@@ -132,8 +132,7 @@ const Work = () => {
             <div className={styles.projectDescBox}>
               <p className={styles.projectDescription}>
                 A pre-launch page that showcases the startup's innovative idea
-                while reaching out to future users through a custom referral
-                program.
+                that includes a custom referral program to attract future users.
               </p>
             </div>
           </div>
@@ -368,7 +367,7 @@ const Work = () => {
 
             <p className={styles.otherProjectDescription}>
               Back-end for the Smart Brain application that calls the artificial
-              intelligence api to detect faces and includes user authentication
+              intelligence api to detect faces. Includes user authentication
               and user entry count.
             </p>
 
