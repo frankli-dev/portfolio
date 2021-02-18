@@ -15,9 +15,9 @@ export const Contact = (): JSX.Element => (
       />
 
       <meta property="og:type" content="website" />
-      <meta name="og:title" property="og:title" content="Ice de Vera Contact" />
+      <meta property="og:title" content="Ice de Vera Contact" />
+      <meta property="og:image" content="/favicon.ico" />
       <meta
-        name="og:description"
         property="og:description"
         content="Although I am currently focusing on my startup, I'm always open to new opportunities. Whether you have a question or just want to talk, feel free to hit me up."
       />

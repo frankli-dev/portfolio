@@ -15,10 +15,11 @@ export const Skills = (): JSX.Element => (
       />
 
       <meta property="og:type" content="website" />
-      <meta name="og:title" property="og:title" content="Ice de Vera Skills" />
+      <meta property="og:title" content="Ice de Vera Skills" />
+      <meta property="og:image" content="/favicon.ico" />
       <meta
-        name="og:description"
-        property="Skilled full-stack web developer with extensive knowledge of the best modern tools used to build impactful applications such as Javascript, Python, Dart, Flutter, React, Gatsby, Next, Shopify, Wordpress, AWS, Node, Express, MongoDB, PostgreSQL, and much more!"
+        property="og:description"
+        content="Skilled full-stack web developer with extensive knowledge of the best modern tools used to build impactful applications such as Javascript, Python, Dart, Flutter, React, Gatsby, Next, Shopify, Wordpress, AWS, Node, Express, MongoDB, PostgreSQL, and much more!"
       />
       <meta property="og:url" content="https://icedevera.com/skills" />
       <meta name="twitter:card" content="summary" />

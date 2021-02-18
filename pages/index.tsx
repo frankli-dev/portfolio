@@ -14,9 +14,9 @@ export const Home = (): JSX.Element => (
         content="I am a full-stack web developer & business analyst based in the Philippines open to freelance opportunities. I am also the founder & CEO of a startup called drapem that aims to transform the fashion industry for the better. My inbox is always open, so feel free to contact me regarding any inquiries!"
       />
       <meta property="og:type" content="website" />
-      <meta name="og:title" property="og:title" content="Ice de Vera" />
+      <meta property="og:title" content="Ice de Vera" />
+      <meta property="og:image" content="/favicon.ico" />
       <meta
-        name="og:description"
         property="og:description"
         content="I am a full-stack web developer & business analyst based in the Philippines open to freelance opportunities. I am also the founder & CEO of a startup called drapem that aims to transform the fashion industry for the better. My inbox is always open, so feel free to contact me regarding any inquiries!"
       />

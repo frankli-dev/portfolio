@@ -21,10 +21,11 @@ export const About = (): JSX.Element => (
       />
 
       <meta property="og:type" content="website" />
-      <meta name="og:title" property="og:title" content="Ice de Vera About" />
+      <meta property="og:title" content="Ice de Vera About" />
+      <meta property="og:image" content="/favicon.ico" />
       <meta
-        name="og:description"
-        property="I am a graduate of Management Engineering with a minor in Information
+        property="og:description"
+        content="I am a graduate of Management Engineering with a minor in Information
         Technology from the Ateneo de Manila University, and I have always had
         a passion for business and technology. I have found that these
         combination of skills work hand in hand to help deliver the best

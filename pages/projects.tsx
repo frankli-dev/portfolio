@@ -14,11 +14,12 @@ export const Projects = (): JSX.Element => (
         content="List of some things that I have built. Ranging from simple Python programs to full-stack front-end to back-end React applications"
       />
 
-<meta property="og:type" content="website" />
-      <meta name="og:title" property="og:title" content="Ice de Vera Projects" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Ice de Vera Projects" />
+      <meta property="og:image" content="/favicon.ico" />
       <meta
-        name="og:description"
-        property="List of some things that I have built. Ranging from simple Python programs to full-stack front-end to back-end React applications"
+        property="og:description"
+        content="List of some things that I have built. Ranging from simple Python programs to full-stack front-end to back-end React applications"
       />
       <meta property="og:url" content="https://icedevera.com/about" />
       <meta name="twitter:card" content="summary" />
