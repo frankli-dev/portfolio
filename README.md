@@ -1,4 +1,4 @@
-<div salign="center">
+<div align="center">
   <img alt="Logo" src="https://raw.githubusercontent.com/icedevera/icedevera/master/public/ice-logo.png" width="100" />
 </div>
 <h1 align="center">
