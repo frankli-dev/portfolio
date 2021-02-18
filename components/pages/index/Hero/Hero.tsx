@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './hero.module.scss'
 
 import Cube from './Cube/Cube'
+import Link from 'next/link'
 
 const Hero: React.FC = () => {
   return (
@@ -26,7 +27,14 @@ const Hero: React.FC = () => {
             </h1>
             <span className={styles.tag}>{'</h1>'}</span>
           </div>
-          <h2 className={styles.subHeading}>Business Analyst & Full Stack Developer</h2>
+          <h2 className={styles.subHeading}>
+            Business Analyst & Full Stack Developer
+          </h2>
+          <Link href="/contact">
+            <div className={styles.cta}>
+              <a>Contact Me</a>
+            </div>
+          </Link>
         </div>
 
         <div className={styles.cube}>

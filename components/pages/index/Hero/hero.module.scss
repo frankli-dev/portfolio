@@ -71,6 +71,38 @@
   letter-spacing: 2px;
 }
 
+.cta {
+  position: relative;
+  outline: none;
+  width: 140px;
+  height: 50px;
+  background-color: $tersiary;
+  border-radius: 10px;
+  font-family: $font;
+  font-weight: 800;
+  font-size: 20px;
+  color: $primary;
+  cursor: pointer;
+  align-self: flex-end;
+  margin: 10px 0;
+  justify-self: flex-start;
+  transition: all 0.2s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 100;
+
+  &:active {
+    transform: scale(0.95);
+  }
+  &:hover {
+    border: 3px solid $tersiary;
+    background-color: transparent;
+    color: $primary;
+  }
+}
+
 .cube {
   height: 100%;
   width: 100%;
@@ -109,6 +141,13 @@
     font-family: $fontCode;
     font-size: 20px;
     letter-spacing: 3px;
+  }
+
+  .cta {
+    outline: none;
+    width: 110px;
+    height: 35px;
+    font-size: 17px;
   }
 }
 
