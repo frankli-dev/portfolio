@@ -16,7 +16,7 @@ const Work = () => {
       <div className={styles.projectCard}>
         <a
           className={styles.projectPic}
-          href="https://lillyfeather.com/"
+          href="https://lillyfeather.netlify.app/"
           rel="noreferrer"
           target="_blank"
         >
