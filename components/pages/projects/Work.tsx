@@ -33,7 +33,7 @@ const Work = () => {
           <div className={styles.projectTitleDesc}>
             <a
               className={styles.linkToProject}
-              href="https://lillyfeather.com/"
+              href="https://lillyfeather.netlify.app/"
               rel="noreferrer"
               target="_blank"
             >
@@ -254,6 +254,148 @@ const Work = () => {
         <div className={styles.otherProjectCard}>
           <img
             className={styles.otherProjectImg}
+            alt="Pixel Packs NFT"
+            src="/images/projects/pixelpacks.png"
+          />
+
+          <div className={styles.otherProjectOverlay} />
+
+          <div className={styles.otherProjectDetails}>
+            <h3 className={styles.otherProjectTitle}>Pixel Packs NFT</h3>
+
+            <p className={styles.otherProjectDescription}>
+              A randomly generated ERC-721 NFT featuring on-chain SVG metadata
+              accompanied by an ERC-20 token which is set to be deployed on the
+              Ethereum or Polygon mainnet.
+            </p>
+
+            <div className={styles.technologies}>
+              <div className={styles.tech}>
+                <img
+                  className={styles.techIcon}
+                  alt="Solidity"
+                  src="/images/skills/backEnd/solidity.png"
+                />
+                <span className={styles.iconTitle}>Solidity</span>
+              </div>
+
+              <div className={styles.tech}>
+                <img
+                  className={styles.techIcon}
+                  alt="Hardhat"
+                  src="/images/skills/backEnd/hardhat.svg"
+                />
+                <span className={styles.iconTitle}>Hardhat</span>
+              </div>
+
+              <div className={styles.tech}>
+                <img
+                  className={styles.techIcon}
+                  alt="Ethereum"
+                  src="/images/skills/backEnd/ethereum.png"
+                />
+                <span className={styles.iconTitle}>Ethereum</span>
+              </div>
+
+              <div className={styles.tech}>
+                <img
+                  className={styles.techIcon}
+                  alt="Ethereum"
+                  src="/images/skills/backEnd/polygon.png"
+                />
+                <span className={styles.iconTitle}>Polygon</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.otherProjectCard}>
+          <img
+            className={styles.otherProjectImg}
+            alt="OXY Originals"
+            src="/images/projects/oxy.png"
+          />
+
+          <div className={styles.otherProjectOverlay} />
+
+          <div className={styles.otherProjectDetails}>
+            <div className={styles.otherProjectLinks}>
+              <a
+                className={styles.otherProjectLink}
+                href="https://oxyoriginals.ph"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={faLink} />
+              </a>
+            </div>
+
+            <h3 className={styles.otherProjectTitle}>OXY Originals</h3>
+
+            <p className={styles.otherProjectDescription}>
+              Improved the cart layout, added dynamic size-charts, and increased
+              site SEO with the Liquid templating language while also
+              configuring payments, shipping, and locations.
+            </p>
+
+            <div className={styles.technologies}>
+              <div className={styles.tech}>
+                <img
+                  className={styles.techIcon}
+                  alt="Shopify"
+                  src="/images/skills/backEnd/shopify.png"
+                />
+                <span className={styles.iconTitle}>Shopify</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.otherProjectCard}>
+          <img
+            className={styles.otherProjectImg}
+            alt="Meet My Feet"
+            src="/images/projects/mmf.png"
+          />
+
+          <div className={styles.otherProjectOverlay} />
+
+          <div className={styles.otherProjectDetails}>
+            <div className={styles.otherProjectLinks}>
+              <a
+                className={styles.otherProjectLink}
+                href="https://meetmyfeetkids.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={faLink} />
+              </a>
+            </div>
+
+            <h3 className={styles.otherProjectTitle}>Meet My Feet</h3>
+
+            <p className={styles.otherProjectDescription}>
+              Created a global version of the existing local e-commerce website
+              while configuring the cart, tags, size-charts, payments, shipping,
+              and locations.
+            </p>
+
+            <div className={styles.technologies}>
+              <div className={styles.tech}>
+                <img
+                  className={styles.techIcon}
+                  alt="Shopify"
+                  src="/images/skills/backEnd/shopify.png"
+                />
+                <span className={styles.iconTitle}>Shopify</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.otherProjectCard}>
+          <img
+            className={styles.otherProjectImg}
             alt="Gladiator's Honor"
             src="/images/projects/gladiatorshonor.png"
           />
@@ -367,8 +509,8 @@ const Work = () => {
 
             <p className={styles.otherProjectDescription}>
               Back-end for the Smart Brain application that calls the artificial
-              intelligence api to detect faces. Includes user authentication
-              and user entry count.
+              intelligence api to detect faces. Includes user authentication and
+              user entry count.
             </p>
 
             <div className={styles.technologies}>

@@ -241,7 +241,6 @@ const MySkills: React.FC = () => {
           </div>
           <span className={styles.logosTagClose}>{'</svg>'}</span>
         </div>
-        
       </div>
 
       <div className={styles.backEnd}>
@@ -263,6 +262,24 @@ const MySkills: React.FC = () => {
               <h4 className={styles.iconTitle}>AWS Certified</h4>
             </div>
           </a>
+
+          <div className={styles.icon}>
+            <img
+              className={styles.iconImage}
+              alt="Ethereum Logo"
+              src="/images/skills/backEnd/ethereum.png"
+            />
+            <h4 className={styles.iconTitle}>Ethereum</h4>
+          </div>
+
+          <div className={styles.icon}>
+            <img
+              className={styles.iconImage}
+              alt="Polygon Logo"
+              src="/images/skills/backEnd/polygon.png"
+            />
+            <h4 className={styles.iconTitle}>Polygon</h4>
+          </div>
 
           <div className={styles.icon}>
             <img

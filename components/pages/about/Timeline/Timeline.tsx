@@ -14,7 +14,7 @@ const Timeline: React.FC = () => {
           contentArrowStyle={{
             borderRight: 'none',
           }}
-          date="Nov 2020 - Present"
+          date="Jan 2021 - Oct 2021"
           className={styles.timelineContainer}
           dateClassName={styles.date}
           iconClassName={styles.iconContainer}
@@ -35,7 +35,7 @@ const Timeline: React.FC = () => {
           contentArrowStyle={{
             borderRight: 'none',
           }}
-          date="Jun 2020 - Nov 2020"
+          date="Jun 2020 - Dec 2020"
           className={styles.timelineContainer}
           dateClassName={styles.date}
           iconClassName={styles.iconContainer}
