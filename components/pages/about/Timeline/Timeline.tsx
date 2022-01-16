@@ -9,6 +9,27 @@ const Timeline: React.FC = () => {
   return (
     <>
       <VerticalTimeline>
+      <VerticalTimelineElement
+          contentStyle={{ background: 'transparent', color: '#fff' }}
+          contentArrowStyle={{
+            borderRight: 'none',
+          }}
+          date="Jan 2022 - Present"
+          className={styles.timelineContainer}
+          dateClassName={styles.date}
+          iconClassName={styles.iconContainer}
+          icon={
+            <img
+              className={styles.timelineIconDrapem}
+              alt="Vacuumlabs Logo"
+              src="/images/brandLogos/vacuumlabs.png"
+            />
+          }
+        >
+          <h3>Vacuumlabs</h3>
+          <p>Software Engineer</p>
+        </VerticalTimelineElement>
+
         <VerticalTimelineElement
           contentStyle={{ background: 'transparent', color: '#fff' }}
           contentArrowStyle={{

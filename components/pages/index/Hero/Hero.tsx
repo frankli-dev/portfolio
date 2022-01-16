@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
             <span className={styles.tag}>{'</h1>'}</span>
           </div>
           <h2 className={styles.subHeading}>
-            Business Analyst & Full Stack Developer
+            Full Stack Developer
           </h2>
           <Link href="/contact" passHref>
             <a className={styles.cta}>Contact Me</a>

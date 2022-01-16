@@ -25,15 +25,16 @@ const About = () => {
         </div>
         <span className={styles.tagOpen}>{'<p>'}</span>
         <p className={styles.description}>
-          I am a graduate of Management Engineering with a minor in Information
-          Technology from the Ateneo de Manila University, and I have always had
-          a passion for business and technology. I have found that these
-          combination of skills work hand in hand to help deliver the best
-          results and exceed expectations.
+          Hi! My name is Ice, and I have always had a strong passion for
+          software engineering. Whether it be learning new technologies or
+          shipping the highest quality solutions, it always sparks a fire in me
+          whenever I am able to utilize technology to make the world a better
+          place. I have experience in full-stack web and mobile development,
+          from building my own startup to working on projects for clients.
           <p className={styles.description}>
-            From analyzing business processes to developing web applications, I
-            enjoy the work of improving & innovating processes that shape our
-            world.
+            In my free time, besides programming, I enjoy playing video games,
+            reading tech news, watching Formula 1, and
+            spending time with family and friends.
           </p>
         </p>
         <span className={styles.tagClose}>{'</p>'}</span>

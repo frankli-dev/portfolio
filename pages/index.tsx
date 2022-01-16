@@ -11,21 +11,21 @@ export const Home = (): JSX.Element => (
       <link rel="canonical" href="https://icedevera.com" />
       <meta
         name="description"
-        content="I am a full-stack web developer & business analyst based in the Philippines open to freelance opportunities. I am also the founder & CEO of a startup called drapem that aims to transform the fashion industry for the better. My inbox is always open, so feel free to contact me regarding any inquiries!"
+        content="Hi! I am a full-stack web developer open to freelance opportunities. I specialize in building apps for startups, small businesses and individuals. Whether you want to build an online pizza shop or create a multi-vendor marketplace my inbox is always open, so feel free to contact me!"
       />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Ice de Vera" />
       <meta property="og:image" content="/favicon.ico" />
       <meta
         property="og:description"
-        content="I am a full-stack web developer & business analyst based in the Philippines open to freelance opportunities. I am also the founder & CEO of a startup called drapem that aims to transform the fashion industry for the better. My inbox is always open, so feel free to contact me regarding any inquiries!"
+        content="Hi! I am a full-stack web developer open to freelance opportunities. I specialize in building apps for startups, small businesses and individuals. Whether you want to build an online pizza shop or create a multi-vendor marketplace my inbox is always open, so feel free to contact me!"
       />
       <meta property="og:url" content="https://icedevera.com" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="Ice de Vera" />
       <meta
         name="twitter:description"
-        content="I am a full-stack web developer & business analyst based in the Philippines open to freelance opportunities. I am also the founder & CEO of a startup called drapem that aims to transform the fashion industry for the better. My inbox is always open, so feel free to contact me regarding any inquiries!"
+        content="Hi! I am a full-stack web developer open to freelance opportunities. I specialize in building apps for startups, small businesses and individuals. Whether you want to build an online pizza shop or create a multi-vendor marketplace my inbox is always open, so feel free to contact me!"
       />
       <meta name="twitter:site" content="icedeveraa" />
       <meta name="twitter:creator" content="icedeveraa" />
