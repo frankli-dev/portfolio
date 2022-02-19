@@ -12,7 +12,12 @@ function encode(data) {
 }
 
 const ContactMe: React.FC = () => {
-  const { register, handleSubmit, errors, reset } = useForm()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm()
   const [submitStatus, setSubmitState] = React.useState<
     'none' | 'error' | 'success'
   >('none')
@@ -25,7 +30,7 @@ const ContactMe: React.FC = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        "form-name": "contact",
+        'form-name': 'contact',
         ...data,
       }),
     })
@@ -39,6 +44,15 @@ const ContactMe: React.FC = () => {
         setSubmitState('error')
       })
   }
+
+  const { ref: nameRef, ...nameProps } = register('name', { required: true })
+  const { ref: emailRef, ...emailProps } = register('email', { required: true })
+  const { ref: subjectRef, ...subjectProps } = register('subject', {
+    required: true,
+  })
+  const { ref: messageRef, ...messageProps } = register('message', {
+    required: true,
+  })
 
   return (
     <div className={styles.container}>
@@ -70,19 +84,13 @@ const ContactMe: React.FC = () => {
           method="POST"
           data-netlify="true"
         >
-          <input
-            type="hidden"
-            name="form-name"
-            ref={register}
-            value="contact"
-          />
+          <input type="hidden" {...register('form-name')} value="contact" />
 
           <div className={styles.fax}>
             <label>
               If you're a robot, please contact me by fax only:
               <input
-                ref={register}
-                name="bot-field"
+                {...register('bot-field')}
                 tabIndex={-1}
                 autoComplete="off"
               />
@@ -106,17 +114,17 @@ const ContactMe: React.FC = () => {
 
           <div className={styles.nameEmail}>
             <TextInput
+              {...nameProps}
+              inputRef={nameRef}
               type="text"
-              name="name"
               label="Name"
-              formRef={register({ required: true })}
             />
 
             <TextInput
+              {...emailProps}
+              inputRef={emailRef}
               type="email"
-              name="email"
               label="Email"
-              formRef={register({ required: true })}
             />
           </div>
 
@@ -134,21 +142,21 @@ const ContactMe: React.FC = () => {
           </div>
 
           <TextInput
+            {...subjectProps}
+            inputRef={subjectRef}
             type="text"
-            name="subject"
             label="Subject"
-            formRef={register({ required: true })}
           />
           {errors.name && (
             <span className={styles.invalidField}>This field is required</span>
           )}
 
           <TextInput
+            {...messageProps}
+            inputRef={messageRef}
             type="textarea"
             textarea={true}
-            name="message"
             label="Message"
-            formRef={register({ required: true })}
           />
           {errors.name && (
             <span className={styles.invalidField}>This field is required</span>

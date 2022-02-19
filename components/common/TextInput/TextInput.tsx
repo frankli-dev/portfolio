@@ -1,43 +1,39 @@
-import { RegisterOptions } from 'react-hook-form'
+import React from 'react'
+import { RefCallBack, UseFormRegisterReturn } from 'react-hook-form'
 import styles from './textInput.module.scss'
 
-interface IProps {
+interface IProps extends Omit<UseFormRegisterReturn, 'ref'> {
   type: string
-  name: string
   label: string
-  formRef: any
   textarea?: boolean
+  inputRef: RefCallBack
 }
 
-const TextInput: React.FC<IProps> = ({
-  type,
-  name,
-  label,
-  formRef,
-  textarea,
-}) => {
+const TextInput: React.FC<IProps> = (props) => {
+  const { type, label, textarea, inputRef, ...rest } = props
+
   return (
     <div className={styles.field}>
       {textarea ? (
         <textarea
+          {...rest}
+          ref={inputRef}
           cols={1}
           rows={7}
-          name={name}
           className={styles.input}
           placeholder=" "
-          ref={formRef}
         />
       ) : (
         <input
+          {...rest}
+          ref={inputRef}
           type={type}
-          name={name}
           className={styles.input}
           placeholder=" "
-          ref={formRef}
         />
       )}
 
-      <label htmlFor={name} className={styles.label}>
+      <label htmlFor={props.name} className={styles.label}>
         {label}
       </label>
     </div>
