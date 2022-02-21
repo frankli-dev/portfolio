@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from './contactMe.module.scss'
-import Map from './Map/Map'
+import dynamic from 'next/dynamic'
 import { useForm } from 'react-hook-form'
 import TextInput from '../../common/TextInput/TextInput'
 import PacmanLoader from 'react-spinners/PacmanLoader'
+import styles from './contactMe.module.scss'
 
 function encode(data) {
   return Object.keys(data)
@@ -12,6 +12,10 @@ function encode(data) {
 }
 
 const ContactMe: React.FC = () => {
+  const Map = dynamic(() => import('./Map/Map'), {
+    ssr: false,
+  })
+
   const {
     register,
     handleSubmit,
